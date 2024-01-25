@@ -1,0 +1,173 @@
+/* start globalrules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: $eggshell;
+    font-family: $family;
+}
+p {
+    font-size: $p-size;
+    color: $wenge-brown;
+}
+ul{
+    list-style: none;
+}
+.dot {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+/* end globalrules */
+
+/* start main rules */
+main {
+    @media (min-width: 1200px) {
+        width: 900px !important;
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        width: 700px !important;
+    }
+    @media (min-width: 376px) and (max-width: 767px) {
+        width: calc(100% - 60px) !important;
+    }
+    @media (max-width: 375px) {
+        width: calc(100% - 40px) !important;
+    }
+    // width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: $white;
+    border-radius: 20px;
+    header {
+        margin-bottom: 30px;
+        img {
+            border-radius: 20px;
+            max-width: 100%;
+        }
+    }
+    .content {
+        h1 {
+            font-family: $t-family;
+            color: $dark-charcoal;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+        .preperation-time {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: $rose-white;
+            margin-top: 30px;
+            h2 {
+                font-size: 18px;
+                font-weight: 400;
+                color: $dark-raspberry;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    .dot {
+                        background-color: $dark-raspberry;
+                    }
+                }
+            }
+        }
+        .ingredients, .instructions {
+            margin-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $light-grey;
+            h2 {
+                font-family: $t-family;
+                color: $nutmeg;
+                text-transform: capitalize;
+                margin-bottom: 15px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    .dot {
+                        background-color: $nutmeg;
+                    }
+                }
+            }
+        }
+        .instructions {
+            ul {
+                li {
+                    align-items: flex-start;
+                    .number {
+                        color: $nutmeg;
+                        font-weight: 600;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            background-color: $nutmeg;
+                            border-radius: 50%;
+                            position: absolute;
+                            bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .nutrition {
+            margin-top: 20px;
+            h2 {
+                font-family: $t-family;
+                color: $nutmeg;
+                text-transform: capitalize;
+                margin-bottom: 15px;
+            }
+            .all-facts {
+                margin-top: 10px;
+                .facts {
+                    padding: 10px 20px;
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-of-type) {
+                        border-bottom: 1px solid $light-grey;
+                    }
+                    &:last-of-type {
+                        padding-bottom: 0;
+                    }
+                    p {
+                        width: 50%;
+                    }
+                    span {
+                        font-size: $p-size;
+                        color: $nutmeg;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+/* end main rules */
+
+/* start footer rulles */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+/* end footer rulles */
